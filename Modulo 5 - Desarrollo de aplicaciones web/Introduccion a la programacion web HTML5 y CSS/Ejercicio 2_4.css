@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+.letra-grande {
+    font-size: 24px;
+}
+
+.letra-pequena {
+    font-size: 12px;
+}
+
+.texto-azul {
+    color: blue;
+}
+
+.fondo-rojo {
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
+
