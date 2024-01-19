@@ -1,0 +1,45 @@
+body {
+    background-color: white;
+}
+
+nav {
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Letra blanca */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: auto; /* Altura automática */
+    padding: 15px 20px; /* Padding superior e inferior de 15px, derecho e izquierdo de 20px */
+    display: flex;
+    flex-direction: row; /* Hace que el menú sea horizontal */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Cambio a dirección horizontal */
+}
+
+nav ul li :hover {
+    color: #feee5b;
+}
+
+nav ul li {
+    margin: 0 50px; /* Agrega un margen a la derecha e izquierda de cada elemento de la lista */    
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.piedepagina span {
+    text-align: center;
+    color: blue;
+    display: block;
+    margin-top: 25px;
+}
