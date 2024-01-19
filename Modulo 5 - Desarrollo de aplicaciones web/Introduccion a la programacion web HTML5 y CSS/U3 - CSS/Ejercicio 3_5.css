@@ -1,0 +1,48 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+div{
+    width: 30%;
+}
+
+form {
+    padding: 20px; /* Relleno alrededor del formulario */
+    border: 1px solid #ccc; /* Borde alrededor del formulario */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra alrededor del formulario */
+    background-color: #f8f9fa; /* Color de fondo del formulario */
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%; /* Ancho de los campos de entrada y el área de texto */
+    padding: 12px 20px; /* Relleno alrededor de los campos de entrada y el área de texto */
+    margin: 8px 0; /* Margen alrededor de los campos de entrada y el área de texto */
+    display: inline-block;
+    border: 1px solid #ccc; /* Borde alrededor de los campos de entrada y el área de texto */
+    border-radius: 4px; /* Bordes redondeados para los campos de entrada y el área de texto */
+    box-sizing: border-box; /* Asegura que el relleno y el borde no aumenten el ancho total */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 12px 20px; /* Relleno alrededor del botón */
+    border: none; /* Sin borde alrededor del botón */
+    border-radius: 4px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa por encima del botón */
+    width: 100%; /* Ancho del botón */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón cuando se pasa por encima */
+}

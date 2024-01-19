@@ -1,0 +1,8 @@
+p.external-style {
+    color: #000000;
+    /* Hexadecimal color value */
+    background-color: #ffffff;
+    /* RGBA color value with opacity */
+    border-color: #da4d64;
+    border-style: dotted;
+}
