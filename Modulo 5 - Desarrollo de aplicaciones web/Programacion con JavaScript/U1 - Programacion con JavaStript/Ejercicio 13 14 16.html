@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Índice</title>
+    <!-- Enlace a Vendors -->
+    <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+
+    <!-- Enlace a archivo CSS externo -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+    <div class="d-flex vh-100">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+            <a href="Index.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">Ejercicios M5L2U1_IM</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                    <a href="Ejercicio 1.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 1
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 2.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 2
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 3.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 3
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 4.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 4
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 5.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 5
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 6.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 6
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 7 8 9.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 7,8 y 9
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 10 11 12.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 10, 11 y 12
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 13 14 16.html" class="nav-link active">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 13, 14 y 16
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 15.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 15
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 17.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 17
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 18.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 18
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contenido principal -->
+        <main class="p-3 w-100">
+            <!-- Aquí va el contenido principal -->
+            <div class="d-flex justify-content-center align-items-center ">
+                <div class="col-4">
+                    <h1 class="text-center">Ejercicios 13, 14 y 16</h1>
+                    <p class="text-center">Funciones básicas</p>
+                    <div class="me-5">
+                        <div class="mb-3">
+                            <label class="form-label">Separar el siguiente array en pares e impares</label>
+                            <label class="form-label">[253, 8575, 1, 20, 562, 1233, 25, 27, 258, 254, 7485,
+                                2683]</label>
+                        </div>
+                        <button class="btn btn-primary" onclick="separarParImpar()">Ejecutar Par o Impar</button>
+                    </div>
+                    <div class="me-5 mt-3">
+                        <button class="btn btn-primary" onclick="procesarMeses()">Procesar meses</button>
+                    </div>
+                    <div class="me-5 mt-3">
+                        <button class="btn btn-primary" onclick="ejercicio16()">Test Clases</button>
+                    </div>
+
+                    <p id="resultado" class="text-center mt-5"></p> <!-- Zona para mostrar el resultado -->
+                    <div id="logger" class="m-4">
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="row ms-3 ">
+                        <pre style="height: 95vh;">
+                                <code class="language-javascript">
+function separarParImpar() {
+    const numbers = [253, 8575, 1, 20, 562, 1233, 25, 27, 258, 254, 7485, 2683]; 
+
+    const pares = numbers.filter(num => num % 2 === 0);
+    const impares = numbers.filter(num => num % 2 !== 0);
+
+    const msg = `Números pares: ${JSON.stringify(pares)}, Números impares: ${JSON.stringify(impares)}`;
+    logMessage(msg);
+}
+
+function procesarMeses() {
+    const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+    const mesesLargos = meses.filter(mes => mes.length > 7).map(mes => mes.toUpperCase());
+
+    const cantidadMesesLargos = mesesLargos.length;
+
+    logMessage(`Meses con más de 7 letras: ${mesesLargos}`);
+    logMessage(`Cantidad de meses con más de 7 letras: ${cantidadMesesLargos}`,true);
+}
+
+class Cuadrado {
+    constructor(lado) {
+        this.lado = lado;
+    }
+
+    calcularPerimetro() {
+        const perimetro = this.lado * 4;
+        logMessage(`El perímetro del cuadrado es: ${perimetro} cm`,true);
+        return perimetro;
+    }
+
+    calcularArea() {
+        const area = this.lado * this.lado;
+        logMessage(`El área del cuadrado es: ${area} cm^2`,true);
+        return area;
+    }
+}
+
+
+// Crear instancias de cuadrados de diferentes tamaños
+function ejercicio16() {
+    clearMessage();
+
+    const cuadradoPequeno = new Cuadrado(2);
+    const cuadradoMediano = new Cuadrado(5);
+    const cuadradoGrande = new Cuadrado(10);
+
+    // Calcular el perímetro y el área de cada cuadrado
+    cuadradoPequeno.calcularPerimetro();
+    cuadradoPequeno.calcularArea();
+
+    cuadradoMediano.calcularPerimetro();
+    cuadradoMediano.calcularArea();
+
+    cuadradoGrande.calcularPerimetro();
+    cuadradoGrande.calcularArea();
+}
+
+function logMessage(msg, append = false) {
+    var logger = document.getElementById("logger");
+    console.log(msg);
+    if (append) {
+        logger.innerHTML += msg + "<br>";
+    }
+    else {
+        logger.innerHTML = msg + "<br>";
+    }
+}
+
+function clearMessage(msg, append = false) {
+    var logger = document.getElementById("logger");
+    logger.innerHTML = "";
+}
+
+                                </code>
+                            </pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- Enlace a Vendors -->
+
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/fontawesome/js/all.min.js"></script>
+    <!-- Enlace al script de Prism -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+    <script src="./assets/js/ejercicio 13 14 16.js"></script>
+</body>
+
+</html>

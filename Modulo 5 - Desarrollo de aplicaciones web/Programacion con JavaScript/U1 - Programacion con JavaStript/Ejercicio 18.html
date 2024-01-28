@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Índice</title>
+    <!-- Enlace a Vendors -->
+    <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+
+    <!-- Enlace a archivo CSS externo -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+    <div class="d-flex vh-100">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+            <a href="Index.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">Ejercicios M5L2U1_IM</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                    <a href="Ejercicio 1.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 1
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 2.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 2
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 3.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 3
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 4.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 4
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 5.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 5
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 6.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 6
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 7 8 9.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 7,8 y 9
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 10 11 12.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 10, 11 y 12
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 13 14 16.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 13, 14 y 16
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 15.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 15
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 17.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 17
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 18.html" class="nav-link active">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 18
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Contenido principal -->
+        <main class="p-3 w-100">
+            <!-- Aquí va el contenido principal -->
+            <div class="d-flex justify-content-center align-items-center ">
+                <div class="col-6">
+                    <h1 class="text-center">Ejercicio 18</h1>
+                    <div id="contenido">
+                        <h1>Eventos</h1>
+                        <p>Haz que cuando se haga click sobre el botón “Guardar”, salté un alert con un mensaje de
+                            guardado.</p>
+                        <button class="btn btn-primary">Guardar</button>
+                        <script>
+                            document.querySelector('.btn').addEventListener('click', function () {
+                                alert('Guardado');
+                            });
+                        </script>
+                        <br>
+                        <br>
+                        <p>Cuando hagamos foco sobre este input se pondrá de color amarillo y cuando se lo quitemos
+                            cambiará de color</p>
+                        <label>Nombre</label>
+                        <input type=”text” class="form-control" id="txtNombre" />
+                        <script>
+                            const inputNombre = document.getElementById('txtNombre');
+
+                            inputNombre.addEventListener('focus', function () {
+                                inputNombre.style.backgroundColor = 'yellow';
+                            });
+
+                            inputNombre.addEventListener('blur', function () {
+                                inputNombre.style.backgroundColor = '';
+                            });
+                        </script>
+                        <br>
+                        <br>
+                        <p>Dependiendo si escribamos una vocal o una consonante el contenido del input apare cerá de
+                            distinto color</p>
+                        <label>Escribe una o varias letras</label>
+                        <div id="txtColor" class="form-control" contenteditable="true"></div>
+                        <script>
+                            const inputColor = document.getElementById('txtColor');
+
+                            inputColor.addEventListener('keydown', function (event) {
+                                const texto = inputColor.innerText;
+
+                                if (texto) { // Verificar si 'texto' no es undefined
+                                    let resultado = '';
+
+                                    for (let i = 0; i < texto.length; i++) {
+                                        const letra = texto[i].toLowerCase();
+
+                                        if (letra.match(/[aeiou]/i)) {
+                                            resultado += `<span style="color: red;">${letra}</span>`;
+                                        } else if (letra.match(/[a-z]/i)) {
+                                            resultado += `<span style="color: blue;">${letra}</span>`;
+                                        } else {
+                                            resultado += letra;
+                                        }
+                                    }
+
+                                    inputColor.innerHTML = resultado;
+
+                                    // pone el cursor al final de
+                                    const selection = window.getSelection();
+                                    const range = document.createRange();
+                                    range.selectNodeContents(inputColor);
+                                    range.collapse(false);
+                                    selection.removeAllRanges();
+                                    selection.addRange(range);
+                                }
+                            });
+                        </script>
+                    </div>
+                    <p id="resultado" class="text-center mt-5"></p> <!-- Zona para mostrar el resultado -->
+                    <div id="logger" class="m-4">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row ms-3 ">
+                        <pre style="height: 95vh;">
+                            <code class="language-javascript">
+
+&lt;script&gt;
+document.querySelector('.btn').addEventListener('click', function () {
+    alert('Guardado');
+});
+&lt;/script&gt;
+
+&lt;script&gt;
+const inputNombre = document.getElementById('txtNombre');
+
+inputNombre.addEventListener('focus', function() {
+    inputNombre.style.backgroundColor = 'yellow';
+});
+
+inputNombre.addEventListener('blur', function() {
+    inputNombre.style.backgroundColor = '';
+});
+&lt;/script&gt;
+
+&lt;script&gt;
+const inputColor = document.getElementById('txtColor');
+
+inputColor.addEventListener('keydown', function(event) {
+    const texto = inputColor.innerText;
+
+    if (texto) { // Verificar si 'texto' no es undefined
+        let resultado = '';
+
+        for (let i = 0; i < texto.length; i++) {
+            const letra = texto[i].toLowerCase();
+
+            if (letra.match(/[aeiou]/i)) {
+                resultado += `&lt;span style="color: red;"&gt;${letra}&lt;/span&gt;`;
+            } else if (letra.match(/[a-z]/i)) {
+                resultado += `&lt;span style="color: blue;"&gt;${letra}&lt;/span&gt;`;
+            } else {
+                resultado += letra;
+            }
+        }
+
+        inputColor.innerHTML = resultado;
+
+        // pone el cursor al final de
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(inputColor);
+        range.collapse(false);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+});
+&lt;/script&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- Enlace a Vendors -->
+
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/fontawesome/js/all.min.js"></script>
+    <!-- Enlace al script de Prism -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Índice</title>
+    <!-- Enlace a Vendors -->
+    <link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet" />
+
+    <!-- Enlace a archivo CSS externo -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+    <div class="d-flex vh-100">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+            <a href="Index.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">Ejercicios M5L2U1_IM</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                    <a href="Ejercicio 1.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 1
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 2.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 2
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 3.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 3
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 4.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 4
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 5.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 5
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 6.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 6
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 7 8 9.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 7,8 y 9
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 10 11 12.html" class="nav-link active">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 10, 11 y 12
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 13 14 16.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 13, 14 y 16
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 15.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 15
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 17.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 17
+                    </a>
+                </li>
+                <li>
+                    <a href="Ejercicio 18.html" class="nav-link text-white">
+                        <i class="fab fa-js fa-lg" style="color: #FFD43B;"></i>
+                        Ejercicio 18
+                    </a>
+                </li>
+            </ul>
+        </div>            <!-- Contenido principal -->
+            <main class="p-3 w-100">
+                <!-- Aquí va el contenido principal -->
+                <div class="d-flex justify-content-center align-items-center ">
+                    <div class="col-4">
+                        <h1 class="text-center">Ejercicios 10, 11 y 12</h1>
+                        <p class="text-center">Funciones básicas</p> 
+                        <div class="me-5">
+                            <div class="mb-3">
+                                <label class="form-label">Introduce un numero</label>
+                                <input type="number" class="form-control" id="arrayVar" placeholder="Introduce un numero">
+                            </div>
+                            <button class="btn btn-primary" onclick="parImpar(document.getElementById('arrayVar').value)">Ejecutar Par o Impar</button>
+                        </div>
+                        <div class="me-5 mt-3">
+                            <button class="btn btn-primary" onclick="analizarTexto()">Analizar texto</button>
+                        </div>
+                        <div class="me-5 mt-3">
+                            <div class="mb-3">
+                                <label class="form-label">Introduce palabras separadas por comas:</label>
+                                <input type="text" class="form-control" id="arrayStr" placeholder="palabra1, palabra2">
+                            </div>
+                            <button class="btn btn-primary" onclick="procesarArray(document.getElementById('arrayStr').value)">Ejecutar reordenar array en mayusculas</button>
+                        </div>
+
+                        <p id="resultado" class="text-center mt-5"></p> <!-- Zona para mostrar el resultado -->
+                        <div id="logger" class="m-4">
+                        </div>                  
+                    </div>
+                    <div class="col-8">
+                        <div class="row ms-3 ">
+                            <pre style="height: 95vh;">
+                                <code class="language-javascript">
+function parImpar(txtnumero) {
+    var numero = parseInt(txtnumero);
+    if (isNaN(numero) || !Number.isInteger(numero)) {
+        alert("La entrada no es un número entero válido.");
+        return;
+    }
+    
+    if (numero % 2 === 0) {
+        alert("El número es par");
+    } else {
+        alert("El número es impar");
+    }
+}
+    
+function analizarTexto() {
+    let texto = prompt("Por favor, introduce un texto");
+    
+    if (texto === texto.toUpperCase()) {
+        alert("El texto está en mayúsculas");
+    } else if (texto === texto.toLowerCase()) {
+        alert("El texto está en minúsculas");
+    } else {
+        alert("El texto tiene una mezcla de mayúsculas y minúsculas");
+    }
+}
+    
+function procesarArray(cadena) {
+    // Divide el string en un array utilizando la coma como separador
+    let array = cadena.split(',');
+    
+    // Convierte todos los elementos a mayúsculas y los reordena en orden inverso
+    let resultado = array.map(elemento => elemento.toUpperCase()).reverse();
+    
+    // Serializa el resultado como JSON
+    let resultadoJSON = JSON.stringify(resultado);
+    
+    // Imprime el resultado en la consola y en el elemento con id "logger"
+    logMessage(resultadoJSON);
+}
+    
+function logMessage(msg) {
+    var logger = document.getElementById("logger");
+    console.log(msg);
+    logger.innerHTML = msg;
+}
+      
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+    <!-- Enlace a Vendors -->
+
+    <script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendors/fontawesome/js/all.min.js"></script> 
+    <!-- Enlace al script de Prism -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+    <script src="./assets/js/ejercicio 10 11 12.js"></script> 
+</body>
+</html>
