@@ -5,9 +5,10 @@ require([
     "esri/layers/MapImageLayer",
     "esri/layers/FeatureLayer",
     "esri/widgets/BasemapToggle",
+    "esri/widgets/ScaleBar",
     "esri/widgets/Legend",
     "esri/geometry/Extent"
-], function (EsriConfig, Map, MapView, MapImageLayer, FeatureLayer, BasemapToggle, Legend, Extent) {
+], function (EsriConfig, Map, MapView, MapImageLayer, FeatureLayer, BasemapToggle, ScaleBar, Legend, Extent) {
     EsriConfig.apiKey = "AAPK67942d4773a94924a7c03d707148d230cvm3Td6tC1gUSyijET8f2Y2YHgaQnpXVGVS_pQWOfwWzidth8Dp6OYK4Czr1jQSN";
 
     var map = new Map({
@@ -57,7 +58,16 @@ require([
             }]
         });
 
-        //view.ui.add(legend, "bottom-right");
+        // Add scalebar with custom style
+        var scaleBar = new ScaleBar({
+            view: view,
+            style: "ruler",
+            unit: "dual"
+        });
+
+        view.ui.add(scaleBar, {
+            position: "bottom-left"
+        });
 
         // Asignar el contenedor de la leyenda al div específico en lugar de añadirlo al mapa
         // Esto insertará el widget de leyenda dentro del div con id="legendPanel"
