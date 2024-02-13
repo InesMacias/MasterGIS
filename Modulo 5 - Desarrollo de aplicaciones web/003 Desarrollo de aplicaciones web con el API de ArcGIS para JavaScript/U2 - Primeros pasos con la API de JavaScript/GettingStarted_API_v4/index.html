@@ -3,16 +3,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Getting Started</title>
-
-    <!--
-    -- Step: Configure dojo for asynchronous module loading
-    -->
-    <script>
-        var dojoConfig = {
-            async: true
-        };
-    </script>
-
     <!--
     -- Step: Reference the ArcGIS API for JavaScript and Esri CSS
     -->
@@ -26,17 +16,20 @@
 
     <script>
         require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
-
+            esriConfig.apiKey = "AAPK67942d4773a94924a7c03d707148d230cvm3Td6tC1gUSyijET8f2Y2YHgaQnpXVGVS_pQWOfwWzidth8Dp6OYK4Czr1jQSN";
             const map = new Map({
-                basemap: "arcgis/topographic" // basemap styles service
+                basemap: "arcgis-topographic" // Basemap layer
             });
 
             const view = new MapView({
                 map: map,
-                center: [-122.45, 37.75], // Longitude, latitude
+                center: [-122.45, 37.75],
                 zoom: 12, // Zoom level
-                container: "divMap" // Div element
-            });            
+                container: "divMap",
+                constraints: {
+                snapToZoom: false
+                }
+            });                    
         });
       </script>
 </head>

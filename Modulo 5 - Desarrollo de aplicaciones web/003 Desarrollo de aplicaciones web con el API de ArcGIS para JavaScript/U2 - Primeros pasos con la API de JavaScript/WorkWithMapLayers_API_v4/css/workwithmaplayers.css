@@ -1,0 +1,21 @@
+html, body, #mainContainer {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+}
+#legendPanel {
+    flex: 0.5;
+    order: 1; 
+    padding: 10px;
+    overflow: auto; 
+}
+#mapViewDiv {
+    flex: 3; 
+    order: 2; 
+}
