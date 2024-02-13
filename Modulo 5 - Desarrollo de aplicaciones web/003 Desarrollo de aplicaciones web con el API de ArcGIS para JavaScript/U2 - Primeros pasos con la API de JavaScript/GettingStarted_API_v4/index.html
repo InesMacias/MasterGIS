@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Getting Started</title>
+
+    <!--
+    -- Step: Configure dojo for asynchronous module loading
+    -->
+    <script>
+        var dojoConfig = {
+            async: true
+        };
+    </script>
+
+    <!--
+    -- Step: Reference the ArcGIS API for JavaScript and Esri CSS
+    -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.28/"></script>
+
+    <!--
+    -- Step: Reference the gettingstarted.css file
+    -->
+    <link rel="stylesheet" href="css/gettingstarted.css"/>
+
+    <script>
+        require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
+
+            const map = new Map({
+                basemap: "arcgis/topographic" // basemap styles service
+            });
+
+            const view = new MapView({
+                map: map,
+                center: [-122.45, 37.75], // Longitude, latitude
+                zoom: 12, // Zoom level
+                container: "divMap" // Div element
+            });            
+        });
+      </script>
+</head>
+
+<body>
+<!--
+-- Step: Create a <div> in which the Map will display
+-->
+<div id="divMap"></div>
+
+</body>
+</html>
