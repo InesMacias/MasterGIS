@@ -1,0 +1,16 @@
+html, body, #divMap {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#paneDiv {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 200px;
+}
