@@ -3,18 +3,14 @@ require([
     "esri/Map",
     "esri/layers/MapImageLayer",
     "esri/layers/FeatureLayer",
-    "esri/symbols/SimpleFillSymbol",
-    "esri/symbols/SimpleLineSymbol",
     "esri/symbols/SimpleMarkerSymbol",
     "esri/Graphic",
-    "esri/geometry/geometryEngine",    
     "esri/views/draw/Draw",
     "esri/views/MapView",
-    "esri/Color",
-    "esri/widgets/Expand",
-    "esri/widgets/Legend",
+    "esri/widgets/Expand",    
     "esri/widgets/FeatureTable",
-], function (EsriConfig, Map, MapImageLayer, FeatureLayer, SimpleFillSymbol, SimpleLineSymbol, SimpleMarkerSymbol, Graphic, geometryEngine, Draw, MapView, Color, Expand, Legend, FeatureTable) {
+    "esri/rest/query"
+], function (EsriConfig, Map, MapImageLayer, FeatureLayer, SimpleMarkerSymbol, Graphic, Draw, MapView, Expand, FeatureTable, query) {
     EsriConfig.apiKey = "AAPK67942d4773a94924a7c03d707148d230cvm3Td6tC1gUSyijET8f2Y2YHgaQnpXVGVS_pQWOfwWzidth8Dp6OYK4Czr1jQSN";
 
     // URL variables
@@ -129,22 +125,32 @@ require([
             }
         });
         view.graphics.add(graphic);
+
+        // get the geometry from graphic and use it to select features
+        selectQuakes(graphic.geometry);
     }
 
     function selectQuakes(geometryInput) {
-
-        // Define symbol for selected features (using JSON syntax for improved readability!)
-        var symbolSelected = new SimpleMarkerSymbol({
-            "type": "esriSMS",
-            "style": "esriSMSCircle",
-            "color": [255, 115, 0, 128],
-            "size": 6,
-            "outline": {
-                "color": [255, 0, 0, 214],
-                "width": 1
+        // Define symbol for selected features
+        let symbolSelected = {
+            type: "simple-marker",
+            style: "circle",
+            color: [255, 115, 0, 128],
+            size: 6,
+            outline: {
+                color: [255, 0, 0, 214],
+                width: 1
             }
-        });
+        };
 
+        // Select the features that intersect the drawn polygon
+        var queryParams = lyrQuakes.createQuery();
+        queryParams.geometry = geometryInput;
+        lyrQuakes.queryFeatures(queryParams)
+            .then(function (results) {
+                // Apply the renderer to the selected features
+                populateGrid(results);
+            });
     }
 
     function populateGrid(results) {
@@ -161,6 +167,7 @@ require([
         var featureTable = new FeatureTable({
             view: view,
             layer: lyrQuakes,
+            container: "divGrid",
             fieldConfigs: [{
                 name: "EQID",
                 label: "ID"
@@ -179,17 +186,14 @@ require([
             }]
         });
 
-        // Create the expand widget for the feature table
-        var expand = new Expand({
-            view: view,
-            content: featureTable
-        });
-
-        // Add the feature table and expand widget to the view
-        view.ui.add(expand, "top-right");
 
         // Set the data for the feature table
         featureTable.set("data", gridData);
+
+
+
+
+
     }
 
 });
