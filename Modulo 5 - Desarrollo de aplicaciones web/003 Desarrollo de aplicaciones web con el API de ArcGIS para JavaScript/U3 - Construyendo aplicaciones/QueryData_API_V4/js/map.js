@@ -168,22 +168,28 @@ require([
             view: view,
             layer: lyrQuakes,
             container: "divGrid",
-            fieldConfigs: [{
-                name: "EQID",
-                label: "ID"
-            }, {
-                name: "UTC_DATETIME",
-                label: "Date/Time",
-                format: {
-                    dateFormat: "short-date-short-time"
-                }
-            }, {
-                name: "MAGNITUDE",
-                label: "Mag"
-            }, {
-                name: "PLACE",
-                label: "Place"
-            }]
+            tableTemplate: {
+                columnTemplates: [{
+                    type: "field",
+                    fieldName: "EQID",
+                    label: "ID"
+                }, {
+                    type: "field",
+                    fieldName: "UTC_DATETIME",
+                    label: "Date/Time",
+                    format: {
+                        dateFormat: "short-date-short-time"
+                    }
+                }, {
+                    type: "field",
+                    fieldName: "MAGNITUDE",
+                    label: "Mag"
+                }, {
+                    type: "field",
+                    fieldName: "PLACE",
+                    label: "Place"
+                }]
+            }
         });
 
 
