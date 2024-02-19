@@ -1,0 +1,49 @@
+.header {
+    background-image: url(../images/banner.jpg);
+}
+
+.footer {
+    margin-top: auto;
+}
+
+/* Aseguramos que el mapa ocupe el espacio disponible en pantalla, menos el header y footer */
+.container {
+    height: calc(100vh - 85px - 54px);
+    /* 85px es la altura estimada del header y 50px del footer */
+    width: 100% !important;
+    max-width: none;
+}
+
+.map-container{
+    padding: 0px;
+    height: calc(100vh - 85px - 54px);
+    width: 100%;
+}
+
+/* Altura mínima para la fila central
+.min-vh-100 {
+    min-height: 100vh;
+} */
+
+
+
+#overviewDiv {
+    position: relative;
+    bottom: 230px;
+    left: 10px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  #extentDiv {
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 50px;
+    left: 70px;
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    z-index: 2;
+  }
