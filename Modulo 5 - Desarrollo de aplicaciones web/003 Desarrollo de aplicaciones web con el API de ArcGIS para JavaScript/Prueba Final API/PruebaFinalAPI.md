@@ -16,7 +16,7 @@ Este documento sirve como memoria y documentación para la aplicación desarroll
 
 ![image](https://github.com/InesMacias/MasterGIS/assets/156369707/b45daa16-0e3b-44ab-a62b-16ca57e3151a)
 
-## Componentes
+## Puntos a destacar
 
 ### Leyenda
 EL componente de leyenda aparece anclado a la izquierda e independiente del mapa
@@ -31,14 +31,35 @@ EL componente de leyenda aparece anclado a la izquierda e independiente del mapa
 
 <img src="https://github.com/InesMacias/MasterGIS/assets/156369707/1915f9bb-ede9-429d-89a8-b263e18f5533" width="400"  />
 
+### Vista general
+
+En la version de 4.xx del API no existe un widget overview ya que está descontinuado. Como alternativa se ha desarrollado una vista alternativa con una extension que marca el area visible en la vista general. Ambas vistas estan sincronizadas.
+
+<img src="https://github.com/InesMacias/MasterGIS/assets/156369707/8d6a8289-67c5-411b-b0e8-c4d3d2d0eea1" width="400"  />
+
 ### Barra de Escala
 
 ![image](https://github.com/InesMacias/MasterGIS/assets/156369707/cb2c1cdd-8a11-464a-a1c0-c7ce2a461ad0)
 
-### Poup de Informacion del estado.
+### Popup de Informacion del estado.
 
+Hay que destacar que el titulo es un texto dinamico que contiene el nombre del estado y sus iniciales. Y que el area esta redondeada para que no contenga decimales.
 
-La aplicación demostrativa elaborada, siguiendo estos requisitos, utiliza tecnologías web fundamentales como HTML, CSS, y JavaScript, mostrando las capacidades y potencial del API de ArcGIS en la creación de aplicaciones de mapeo interactivas. A continuación, se detalla la estructura de archivos de la aplicación, su configuración y los pasos principales para replicar y entender el funcionamiento de la misma.
+<img src="https://github.com/InesMacias/MasterGIS/assets/156369707/c7f10e76-82d3-40d8-a460-b29fd67e43db" width="400"  />
+
+## Seleccion de caracteristicas
+
+### Seleccion de Estado
+
+En el pie de pagina se puede seleccionar un estado y pulsando en "Ir al estado" se realiza una seleccion de la caracteristica "Estado" con ese nombre y se hace zoom en el mapa para mostrarlo.
+
+<img src="https://github.com/InesMacias/MasterGIS/assets/156369707/218ca073-9c8d-4286-96d1-7fec77b2b703" width="400"  />
+
+### Seleccion de ciudades utilizando un poligono
+
+En la pestaña tareas, pulsando el boton "Seleccionar Ciudades" se puede dibujar un poligono en el mapa. Al hacer doble click se remarcan las coidades seleccionadas.
+
+<img src="https://github.com/InesMacias/MasterGIS/assets/156369707/ab345b99-ef05-4bb9-80a1-0a6c8cb4eb09" width="400"  />
 
 ## Estructura del Proyecto
 
