@@ -35,6 +35,8 @@ EL componente de leyenda aparece anclado a la izquierda e independiente del mapa
 
 En la version de 4.xx del API no existe un widget overview ya que está descontinuado. Como alternativa se ha desarrollado una vista alternativa con una extension que marca el area visible en la vista general. Ambas vistas estan sincronizadas.
 
+El codigo propuesto es una variante del siguiente ejemplo. [https://developers.arcgis.com/javascript/latest/sample-code/overview-map/](https://developers.arcgis.com/javascript/latest/sample-code/overview-map/)
+
 <img src="https://github.com/InesMacias/MasterGIS/assets/156369707/8d6a8289-67c5-411b-b0e8-c4d3d2d0eea1" width="400"  />
 
 ### Barra de Escala
