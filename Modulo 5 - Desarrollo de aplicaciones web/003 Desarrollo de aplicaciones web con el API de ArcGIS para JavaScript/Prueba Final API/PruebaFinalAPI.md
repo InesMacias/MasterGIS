@@ -12,7 +12,22 @@ Este documento sirve como memoria y documentación para la aplicación desarroll
     - **Galería de mapas base (BaseMapGallery)**: Ofrecer diferentes estilos de mapa base.
     - **Vista general (Overview)**: Proporcionar un mapa de vista general que muestre la extensión actual del mapa principal en un contexto más amplio.
     - **Barra de escala (ScaleBar)**: Mostrar una escala gráfica para entender las distancias en el mapa.
-4. **Mostrar información del condado**: Utilizar un `FeatureLayer` con el identificador 2 del MapServer para mostrar información específica del condado a través de un popup al interactuar con el mapa.
+4. **Mostrar información del estado**: Utilizar un `FeatureLayer` con el identificador 2 del MapServer para mostrar información específica del condado a través de un popup al interactuar con el mapa.
+
+![image](https://github.com/InesMacias/MasterGIS/assets/156369707/b45daa16-0e3b-44ab-a62b-16ca57e3151a)
+
+## Componentes
+
+### Leyenda
+
+### Busqueda integrada
+
+### Galeria de Mapas
+
+### Barra de Escala
+
+### Poup de Informacion del estado.
+
 
 La aplicación demostrativa elaborada, siguiendo estos requisitos, utiliza tecnologías web fundamentales como HTML, CSS, y JavaScript, mostrando las capacidades y potencial del API de ArcGIS en la creación de aplicaciones de mapeo interactivas. A continuación, se detalla la estructura de archivos de la aplicación, su configuración y los pasos principales para replicar y entender el funcionamiento de la misma.
 
