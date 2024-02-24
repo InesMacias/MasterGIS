@@ -62,14 +62,10 @@ class MapController {
      * @type {Object}
      */
     estadoTemplate = {
-        title: "Información del estado",
+        title: "Estado de {STATE_NAME}, {STATE_ABBR}",
         content: [{
             type: "fields",
             fieldInfos: [{
-                fieldName: "STATE_NAME",
-                label: "Nombre del estado",
-                visible: true
-            }, {
                 fieldName: "POP2000",
                 label: "Población 2000",
                 visible: true
@@ -78,10 +74,16 @@ class MapController {
                 label: "Población por milla cuadrada en 2000",
                 visible: true
             }, {
-                fieldName: "AREA",
-                label: "Área",
+                fieldName: "expression/area_rounded",
+                label: "Área (millas cuadradas)",
                 visible: true
             }]
+        }],
+        expressionInfos: [{
+            expression: "Round($feature['ss6.gdb.States.area'])",
+            name: "area_rounded",
+            returnType: "number",
+            title: "Área (millas cuadradas)"
         }]
     };
 
