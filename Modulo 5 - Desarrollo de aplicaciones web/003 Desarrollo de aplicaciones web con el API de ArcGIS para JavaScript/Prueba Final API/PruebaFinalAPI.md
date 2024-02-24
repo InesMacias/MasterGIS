@@ -65,23 +65,23 @@ En la pestaña tareas, pulsando el boton "Seleccionar Ciudades" se puede dibujar
 
 La aplicación se organiza en una estructura de archivos y carpetas que facilitan su desarrollo, mantenimiento y escalabilidad. A continuación, se describe la organización de los archivos y carpetas principales del proyecto:
 
-- [index.html](index.html): Este es el archivo principal que contiene la estructura HTML de la aplicación. Define la maquetación de la página, incluyendo el encabezado, el pie de página, los contenedores para el mapa y los widgets, así como la inclusión de los archivos CSS y JavaScript necesarios para el funcionamiento de la aplicación.
+- [index.html](./index.html): Este es el archivo principal que contiene la estructura HTML de la aplicación. Define la maquetación de la página, incluyendo el encabezado, el pie de página, los contenedores para el mapa y los widgets, así como la inclusión de los archivos CSS y JavaScript necesarios para el funcionamiento de la aplicación.
 
 - `/css/`:
-  - [layout.css](/css/layout.cs): Archivo de hoja de estilos CSS que define los estilos de la aplicación. Incluye estilos para el encabezado, pie de página, la disposición del mapa y los widgets, así como estilos personalizados para los elementos de la interfaz de usuario.
+  - [layout.css](./css/layout.cs): Archivo de hoja de estilos CSS que define los estilos de la aplicación. Incluye estilos para el encabezado, pie de página, la disposición del mapa y los widgets, así como estilos personalizados para los elementos de la interfaz de usuario.
 
 - `/js/`:
-  - [index.js](/js/index.js): Archivo JavaScript que contiene la lógica de inicialización de la aplicación. Se encarga de configurar el mapa, agregar widgets y gestionar eventos de la interfaz de usuario.
-  - [map_controller.js](/js/map_controller.js): Archivo JavaScript que actúa como controlador del mapa. Contiene las funciones y métodos para interactuar con el API de ArcGIS, como la adición de capas, widgets y herramientas para la manipulación y visualización de datos geográficos.
+  - [index.js](./js/index.js): Archivo JavaScript que contiene la lógica de inicialización de la aplicación. Se encarga de configurar el mapa, agregar widgets y gestionar eventos de la interfaz de usuario.
+  - [map_controller.js](./js/map_controller.js): Archivo JavaScript que actúa como controlador del mapa. Contiene las funciones y métodos para interactuar con el API de ArcGIS, como la adición de capas, widgets y herramientas para la manipulación y visualización de datos geográficos.
 
 - `/images/`:
-  - [banner.jpg](/images/banner.jpg): Imagen utilizada en el encabezado de la aplicación.
+  - [banner.jpg](./images/banner.jpg): Imagen utilizada en el encabezado de la aplicación.
 
 La estructura está diseñada para separar claramente el contenido (HTML), la presentación (CSS) y la lógica de la aplicación (JavaScript), siguiendo las mejores prácticas de desarrollo web. Esto permite una mayor facilidad a la hora de realizar modificaciones y añadir nuevas funcionalidades.
 
-## Archivo [index.html](index.html)
+## Archivo [index.html](./index.html)
 
-El archivo [index.html](index.html) constituye la base de la interfaz de usuario de la aplicación. Para la estructuración y diseño de la interfaz se ha empleado **Bootstrap** como marco de referencia. Esto proporciona una serie de ventajas para el desarrollo de la aplicación, como:
+El archivo [index.html](./index.html) constituye la base de la interfaz de usuario de la aplicación. Para la estructuración y diseño de la interfaz se ha empleado **Bootstrap** como marco de referencia. Esto proporciona una serie de ventajas para el desarrollo de la aplicación, como:
 
 - **Responsividad**: Asegura que la aplicación se muestre correctamente en dispositivos de diferentes tamaños.
 - **Estilos predefinidos**: Facilita la aplicación de estilos a los elementos HTML para mantener una apariencia coherente y profesional.
@@ -93,11 +93,11 @@ La elección de Bootstrap contribuye significativamente a la rapidez y eficienci
 
 ### Hojas de Estilo CSS
 
-- [layout.css](/css/layout.cs): Este archivo CSS se encuentra dentro de la carpeta `/css` y contiene todos los estilos específicos utilizados en la aplicación, como la personalización del encabezado, el pie de página, el contenedor del mapa, y otros elementos de la UI. Se ha diseñado para trabajar en conjunto con Bootstrap, asegurando que la aplicación mantenga una apariencia coherente y responsive.
+- [layout.css](./css/layout.cs): Este archivo CSS se encuentra dentro de la carpeta `/css` y contiene todos los estilos específicos utilizados en la aplicación, como la personalización del encabezado, el pie de página, el contenedor del mapa, y otros elementos de la UI. Se ha diseñado para trabajar en conjunto con Bootstrap, asegurando que la aplicación mantenga una apariencia coherente y responsive.
 
 ### Recursos de Imágenes
 
-- [banner.jpg](/images/banner.jpg): Ubicado en la carpeta `/images`, este recurso gráfico se utiliza como imagen de fondo en el encabezado de la aplicación. Aporta un aspecto visualmente atractivo y relacionado con la temática de la aplicación GIS.
+- [banner.jpg](./images/banner.jpg): Ubicado en la carpeta `/images`, este recurso gráfico se utiliza como imagen de fondo en el encabezado de la aplicación. Aporta un aspecto visualmente atractivo y relacionado con la temática de la aplicación GIS.
 
 Estos recursos juegan un papel crucial en la presentación y la funcionalidad de la aplicación, asegurando una interfaz de usuario agradable y una experiencia de usuario coherente.
 
@@ -105,13 +105,13 @@ Estos recursos juegan un papel crucial en la presentación y la funcionalidad de
 
 La aplicación hace uso de dos ficheros JavaScript principales para gestionar la interactividad y las funcionalidades del mapa:
 
-### [index.js](/js/index.js)
+### [index.js](./js/index.js)
 
 Este archivo sirve como el punto de entrada para la inicialización y configuración de la aplicación. Se encarga de crear una instancia del controlador del mapa, configurar eventos de UI como botones y selecciones, e invocar métodos específicos del controlador para añadir widgets y funcionalidades al mapa.
 
-### [map_controller.js](/js/map_controller.js)
+### [map_controller.js](./js/map_controller.js)
 
-El archivo [map_controller.js](/js/map_controller.js) define la clase `MapController`, que actúa como el núcleo de la aplicación para gestionar el mapa y sus interacciones. A continuación, se detallan algunas de las características clave de este controlador:
+El archivo [map_controller.js](./js/map_controller.js) define la clase `MapController`, que actúa como el núcleo de la aplicación para gestionar el mapa y sus interacciones. A continuación, se detallan algunas de las características clave de este controlador:
 
 - **Inicialización del Mapa**: Se configura un mapa de ArcGIS utilizando la API de JavaScript de ArcGIS, definiendo capas, vistas y otros componentes necesarios.
 
