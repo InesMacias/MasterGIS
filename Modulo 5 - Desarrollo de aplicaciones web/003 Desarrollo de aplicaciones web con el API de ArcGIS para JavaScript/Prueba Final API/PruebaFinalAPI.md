@@ -53,13 +53,13 @@ Hay que destacar que el titulo es un texto dinamico que contiene el nombre del e
 
 En el pie de pagina se puede seleccionar un estado y pulsando en "Ir al estado" se realiza una seleccion de la caracteristica "Estado" con ese nombre y se hace zoom en el mapa para mostrarlo.
 
-<img src="https://github.com/InesMacias/MasterGIS/assets/156369707/218ca073-9c8d-4286-96d1-7fec77b2b703" width="400"  />
+![image](https://github.com/InesMacias/MasterGIS/assets/156369707/218ca073-9c8d-4286-96d1-7fec77b2b703)
 
 ### Seleccion de ciudades utilizando un poligono
 
 En la pestaña tareas, pulsando el boton "Seleccionar Ciudades" se puede dibujar un poligono en el mapa. Al hacer doble click se remarcan las coidades seleccionadas.
 
-<img src="https://github.com/InesMacias/MasterGIS/assets/156369707/ab345b99-ef05-4bb9-80a1-0a6c8cb4eb09" width="400"  />
+![image](https://github.com/InesMacias/MasterGIS/assets/156369707/ab345b99-ef05-4bb9-80a1-0a6c8cb4eb09)
 
 ## Estructura del Proyecto
 
