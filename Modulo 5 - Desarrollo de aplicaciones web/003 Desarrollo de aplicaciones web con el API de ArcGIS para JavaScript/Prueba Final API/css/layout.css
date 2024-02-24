@@ -6,10 +6,8 @@
     margin-top: auto;
 }
 
-/* Aseguramos que el mapa ocupe el espacio disponible en pantalla, menos el header y footer */
 .container {
     height: calc(100vh - 85px - 54px);
-    /* 85px es la altura estimada del header y 50px del footer */
     width: 100% !important;
     max-width: none;
 }
@@ -19,12 +17,6 @@
     height: calc(100vh - 85px - 54px);
     width: 100%;
 }
-
-/* Altura mínima para la fila central
-.min-vh-100 {
-    min-height: 100vh;
-} */
-
 
 
 #overviewDiv {

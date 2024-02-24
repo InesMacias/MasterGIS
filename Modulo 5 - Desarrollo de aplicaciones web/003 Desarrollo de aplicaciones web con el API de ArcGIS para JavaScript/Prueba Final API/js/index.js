@@ -1,28 +1,29 @@
 
 /**
- * Archivo principal de la aplicación.
- * Este archivo contiene la lógica principal para crear y controlar el mapa, así como agregar capas, widgets y funcionalidades adicionales.
+ * Inicializa el mapa y agrega varios componentes y event listeners.
  */
-
 const mapContainer = document.getElementById("map-container");
 const mapController = new MapController(mapContainer, "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer");
 
-//mapController.AddDynamicLayer("https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer");
 
+// Agregar componentes al mapa
+// Agregar leyenda
 mapController.AddLeyenda(document.getElementById("leyenda-container"));
+
+// Agregar widget de búsqueda
 mapController.AddSearchWidget();
+
+// Agregar widget de coordenadas
 mapController.AddBaseMapoGallery();
+
+// Agregar escala
 mapController.AddScaleBar();
 
+// Agregar componente de vista general
 const overviewMapContainer = document.getElementById("overviewDiv");
 mapController.AddOverviewMap(overviewMapContainer);
 
-mapController.InitSelectCityFeatures();
-
-/**
- * Evento de clic para el botón "btoGotoEstado".
- * Obtiene el valor seleccionado del elemento "cboEstado" y utiliza el controlador del mapa para navegar al estado correspondiente.
- */
+// Agregar selección de estados
 const btoGotoEstado = document.getElementById("btoGotoEstado");
 btoGotoEstado.addEventListener("click", () => {
     const cboEstado = document.getElementById("cboEstado");
@@ -30,8 +31,16 @@ btoGotoEstado.addEventListener("click", () => {
     mapController.GotoEstado(selectedValue);
 });
 
+// Agregar selección de ciudades
+mapController.InitSelectCityFeatures();
 const btoSelectCiudades = document.getElementById("btoSelectCiudades");
 btoSelectCiudades.addEventListener("click", () => {
-    mapController.StartCitiesSelection();
+    mapController.StartCitiesSelection();    
+});
+
+// Agregar limpiar selección
+btoClearAllSelections = document.getElementById("btoClearAllSelections");
+btoClearAllSelections.addEventListener("click", () => {
+    mapController.ClearAllSelections();
 });
 
